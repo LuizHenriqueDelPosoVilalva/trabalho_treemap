@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>JavaScript Treemap Chart</title>
   <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-core.min.js"></script>
   <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-treemap.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <style type="text/css">  	
-    html, body, #container {
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style type="text/css">
+    html,
+    body,
+    #container {
       width: 100%;
       height: 100%;
       margin: 0;
@@ -15,75 +19,128 @@
     }
   </style>
 </head>
+
 <body>
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Grafico de arvore/ Treemap</span>
+      <span class="navbar-brand mb-0 h1">Grafico de arvore/ Treemap - Pib das regiões e estados do Brasil</span>
     </div>
   </nav>
+  <div class="container d-flex mt-5 gap-5 flex-wrap">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Norte</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Nordeste</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Sudeste</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Centro Oeste</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Centro Oeste</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Sul</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+  </div>
   <div id="container"></div>
 
   <script>
     anychart.onDocumentReady(function () {
       let dataSet = [
-        {name: "Brasil", fill: "#FFFFFF", children: [
-          {name: "Norte", fill: "#4CAF50", children: [
-            {name: "Acre", fill: "#64DD17", value: 100},
-            {name: "Amapá", fill: "#AEEA00", value: 150},
-            {name: "Amazonas", fill: "#00C853", value: 200},
-            {name: "Para", fill: "#4CAF50", value: 200},
-            {name: "Tocantins", fill: "#64DD17", value: 200},
-            {name: "Rondonia", fill: "#AEEA00", value: 200},
-            {name: "Roraima", fill: "#00C853", value: 200},
-          ]},
-          {name: "Nordeste", fill: "#FFC107", children: [
-            {name: "Alagoas", fill: "#FFD600", value: 80},
-            {name: "Bahia", fill: "#FFA000", value: 120},
-            {name: "Ceará", fill: "#FF8F50", value: 180},
-            {name: "Maranhão", fill: "#FFD600", value: 180},
-            {name: "Paraiba", fill: "#FF8F00", value: 180},
-            {name: "Pernambuco", fill: "#FF8F00", value: 180},
-            {name: "Piaui", fill: "#FF8F00", value: 180},
-            {name: "Rio Grande do Norte", fill: "#FF8F00", value: 180},
-            {name: "Sergipe", fill: "#FF8F00", value: 180},
-          ]},
-          {name: "Centro Oeste", fill: "#E91E63", children: [
-            {name: "Distrito Federal", fill: "#C2185B", value: 50},
-            {name: "Goiás", fill: "#D81B60", value: 90},
-            {name: "Mato Grosso", fill: "#EC407A", value: 120},
-            {name: "Mato Grosso do Sul", fill: "#D81B60", value: 120},
-          ]},
-          {name: "Sudeste", fill: "#2196F3", children: [
-            {name: "Espírito Santo", fill: "#1565C0", value: 30},
-            {name: "Minas Gerais", fill: "#1976D2", value: 160},
-            {name: "Rio de Janeiro", fill: "#0D47A1", value: 110},
-            {name: "São Paulo", fill: "#0D47A1", value: 200},
-          ]},
-          {name: "Sul", fill: "#FF5722", children: [
-            {name: "Paraná", fill: "#D84315", value: 130},
-            {name: "Rio Grande do Sul", fill: "#BF360C", value: 170},
-            {name: "Santa Catarina", fill: "#FF3D00", value: 110},
-          ]}
-        ]}
+        {
+          name: "Brasil", fill: "#FFFFFF", children: [
+            {
+              name: "PIB da região Norte: R$478.173.000.000", fill: "#4CAF50", children: [
+                { name: "Acre", fill: "#64DD17", value: 3.44 },
+                { name: "Amapá", fill: "#AEEA00", value: 3.86 },
+                { name: "Amazonas", fill: "#00C853", value: 24.26 },
+                { name: "Para", fill: "#4CAF50", value: 46.15 },
+                { name: "Tocantins", fill: "#64DD17", value: 9.12 },
+                { name: "Rondonia", fill: "#AEEA00", value: 10.79 },
+                { name: "Roraima", fill: "#00C853", value: 3.35 },
+              ]
+            },
+            {
+              name: "PIB da região Nordeste: R$ 1.079.331.000.000", fill: "#FFC107", children: [
+                { name: "Alagoas", fill: "#FFD600", value: 5.85 },
+                { name: "Bahia", fill: "#FFA000", value: 28.28 },
+                { name: "Ceará", fill: "#FF8F50", value: 15.46 },
+                { name: "Maranhão", fill: "#FFD600", value: 9.90 },
+                { name: "Paraiba", fill: "#FF8F00", value: 6.51 },
+                { name: "Pernambuco", fill: "#FF8F00", value: 17.90 },
+                { name: "Piaui", fill: "#FF8F00", value: 5.22 },
+                { name: "Rio Grande do Norte", fill: "#FF8F00", value: 6.63 },
+                { name: "Sergipe", fill: "#FF8F00", value: 4.20 },
+              ]
+            },
+            {
+              name: "PIB da região Centro Oeste: R$791.251.000.000", fill: "#E91E63", children: [
+                { name: "Distrito Federal", fill: "#C2185B", value: 33.59 },
+                { name: "Goiás", fill: "#D81B60", value: 28.32 },
+                { name: "Mato Grosso", fill: "#EC407A", value: 22.57 },
+                { name: "Mato Grosso do Sul", fill: "#D81B60", value: 15.49 },
+              ]
+            },
+            {
+              name: "PIB da região Sudeste: R$3.952.695.000.000", fill: "#2196F3", children: [
+                { name: "Espírito Santo", fill: "#1565C0", value: 3.5},
+                { name: "Minas Gerais", fill: "#1976D2", value: 17.27 },
+                { name: "Rio de Janeiro", fill: "#0D47A1", value: 19.07 },
+                { name: "São Paulo", fill: "#0D47A1", value: 60.15 },
+              ]
+            },
+            {
+              name: "PIB da região Sul: 138.446.000.000", fill: "#FF5722", children: [
+                { name: "Paraná", fill: "#D84315", value: 37.29 },
+                { name: "Rio Grande do Sul", fill: "#BF360C", value: 26.69 },
+                { name: "Santa Catarina", fill: "#FF3D00", value: 36 },
+              ]
+            }
+          ]
+        }
       ];
 
       let chart = anychart.treeMap(dataSet, "as-tree");
 
       chart.title("Indicador de feminicidio nas regiões do Brasil-2023");
-      
-      
-      chart.fill("#FFFFFF", 0); 
-      chart.fill("#4CAF50", 1); 
-      chart.fill("#64DD17", 2); 
 
-      // Define a profundidade máxima para exibir ambos os níveis
+
+      chart.fill("#FFFFFF", 0);
+      chart.fill("#4CAF50", 1);
+      chart.fill("#64DD17", 2);
+
       chart.maxDepth(2);
 
       chart.container("container");
       chart.draw();
     });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>
