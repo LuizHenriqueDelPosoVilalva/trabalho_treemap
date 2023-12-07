@@ -22,7 +22,7 @@
 
 <body>
   <nav class="navbar navbar-light bg-light mb-5">
-    <div class="container-fluid">
+    <div class="container-fluid justify-content-center">
       <h1>Grafico de arvore/ Treemap - Pib das regiões e estados do Brasil</h1>
     </div>
   </nav>
@@ -39,23 +39,26 @@
       dados. Um gráfico de explosão solar é um gráfico com uma representação visual muito melhor para mostrar esse
       tipo de informação, abaixo temos um exemplo.</p>
   </div>
+  <div class="container pt-4">
+    <h4 class="mb-3">O que é PIB</h4>
+    <p>O PIB é a soma dos bens e serviços produzidos por cada uma das unidades federativas do país, incluindo o Distrito Federal, em um período determinado.</p>
+  </div>
   <div id="container"></div>
   <div class="container justify-content-center d-flex mt-5 mb-5 gap-5 flex-wrap">
     <div class="card" style="width: 100%;">
       <div class="card-body">
-        <h5 class="card-title">PIB do Brasil: 5.43 trilhões</h5>
+        <h5 class="card-title">PIB do Brasil: R$ 7.609.598.000.000</h5>
         <p class="card-text text-break">
-          - Norte: 2,06%<br>
-          - Nordeste: 19,88%<br>
-          - Centro-Oeste: 14,59%<br>
-          - Sudeste: 72,90%<br>
-          - Sul: 8,57%<br>
+          - Norte: 6,29%<br>
+          - Nordeste: 14,19%<br>
+          - Centro-Oeste: 10,49%<br>
+          - Sudeste: 51,95%<br>
+          - Sul: 17,20%<br>
         </p>
         <div>
           <p class="card-text text-break">
-            Media de contribuição: 23,6%
-            Mediana: 14,59%
-            Outlier: Sudoeste com 72,90% de contribuição no PIB
+            Media de contribuição: 20%
+            Outlier: Sudoeste com 51,95% de contribuição no PIB
           </p>
         </div>
       </div>
@@ -108,7 +111,7 @@
               ]
             },
             {
-              name: "PIB da região Sul: R$ 138.446.000.000", children: [
+              name: "PIB da região Sul: R$ 1.308.446.000.000", children: [
                 { name: "Paraná", fill: "#FF5722", value: 487931000000, contribuicao: "37,29%" },
                 { name: "Rio Grande do Sul", fill: "#FF5722", value: 349275000000, contribuicao: "36%" },
                 { name: "Santa Catarina", fill: "#FF5722", value: 470942000000, contribuicao: "26,69%" },
