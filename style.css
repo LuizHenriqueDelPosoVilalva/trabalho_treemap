@@ -2,3 +2,51 @@ img {
     max-width: 40%;
     max-height: 40%;
 }
+
+.dot-norte {
+    height: 25px;
+    width: 25px;
+    background-color: #4CA950;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-nordeste {
+    height: 25px;
+    width: 25px;
+    background-color: #FFC107;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-centroOste {
+    height: 25px;
+    width: 25px;
+    background-color: #E91E63;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-sul {
+    height: 25px;
+    width: 25px;
+    background-color: #FF5722;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-sul {
+    height: 25px;
+    width: 25px;
+    background-color: #FF5722;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-sudeste {
+    height: 25px;
+    width: 25px;
+    background-color: #2196F3;
+    border-radius: 50%;
+    display: inline-block;
+}

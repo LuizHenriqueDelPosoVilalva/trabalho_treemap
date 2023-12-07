@@ -22,13 +22,13 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-light bg-light mb-5">
+  <nav class="navbar navbar-light bg-secondary text-white mb-5">
     <div class="container-fluid justify-content-center">
-      <h1>Grafico de arvore/ Treemap - Pib das regiões e estados do Brasil</h1>
+      <h1>Grafico de arvore/ Treemap - PIB das regiões e estados do Brasil</h1>
     </div>
   </nav>
   <div class="container pt-4">
-    <h1 class="border-bottom mb-5">Introdução ao Grafico de arvore</h1>
+    <h2 class="border-bottom mb-5">Introdução ao Grafico de arvore</h2>
     <p>Um gráfico de mapa de árvore fornece uma exibição hierárquica de seus dados e torna mais fácil detectar
       padrões, como quais itens são os best-sellers de um armazenamento. As ramificações de árvore são representadas
       por retângulos e cada sub-ramificação é mostrada como um retângulo menor. O gráfico de mapa de árvore exibe
@@ -49,11 +49,38 @@
     <p>O PIB é a soma dos bens e serviços produzidos por cada uma das unidades federativas do país, incluindo o Distrito
       Federal, em um período determinado.</p>
   </div>
+  <div class="container mt-5">
+    <h4 class="mb-3">Grafico</h4>
+  </div>
+  <div class="container gap-4 d-flex flex-wrap">
+    <div class="d-flex">
+      <span class="dot-norte"></span>
+      <h5>Norte</h5>
+    </div>
+    <div class="d-flex">
+      <span class="dot-nordeste"></span>
+      <h5>Nordeste</h5>
+    </div>
+    <div class="d-flex">
+      <span class="dot-centroOste"></span>
+      <h5>Centro Oeste</h5>
+    </div>
+    <div class="d-flex">
+      <span class="dot-sul"></span>
+      <h5>Sul</h5>
+    </div>
+    <div class="d-flex">
+      <span class="dot-sudeste"></span>
+      <h5>Sudeste</h5>
+    </div>
+  </div>
   <div id="container"></div>
   <div class="container justify-content-center d-flex mt-5 mb-5 gap-5 flex-wrap">
-    <div class="card" style="width: 100%;">
+    <div class="card bg-secondary text-white" style="width: 100%;">
       <div class="card-body">
         <h5 class="card-title">PIB do Brasil: R$ 7.609.598.000.000</h5>
+        <h6 class="card-title fw-bolder">Participação percentual por região para o PIB do pais</h6>
+        <h5 class="card-title"></h5>
         <p class="card-text text-break">
           - Norte: 6,29%<br>
           - Nordeste: 14,19%<br>
@@ -62,10 +89,37 @@
           - Sul: 17,20%<br>
         </p>
         <div>
-          <p class="card-text text-break">
-            Media de contribuição: 20%
-            Outlier: Sudoeste com 51,95% de contribuição no PIB
-          </p>
+          <h6 class="card-title fw-bolder">Caracteristicas estatisticas</h6>
+          <div>
+            <p class="card-text text-break">
+              Media de contribuição: 20%
+            </p>
+          </div>
+          <div>
+            <p class="card-text text-break">
+              Primeiro Quartil (Q1): 9,34%
+            </p>
+          </div>
+          <div>
+            <p class="card-text text-break">
+              Segundo Quartil (Q2 ou Mediana): 14,19%
+            </p>
+          </div>
+          <div>
+            <p class="card-text text-break">
+              Terceiro Quartil (Q3): 22,72%
+            </p>
+          </div>
+          <div>
+            <p class="card-text text-break">
+              Desvio Padrão: Aproximadamente 14,38%
+            </p>
+          </div>
+          <div>
+            <p class="card-text text-break">
+              Outlier(Região com contribuição muito acima da média): Sudoeste com 51,95% de contribuição no PIB
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -75,9 +129,9 @@
     anychart.onDocumentReady(function () {
       let dataSet = [
         {
-          name: "Brasil", children: [
+          name: "Brasil",value:"7.609.598.000.000", children: [
             {
-              name: "PIB da região Norte: R$ 478.173.000.000", children: [
+              name: "Norte", value: "478.173.000.000", children: [
                 { name: "Acre", fill: "#4CA950", value: 16476000000, contribuicao: "3,44%" },
                 { name: "Amapá", fill: "#4CA950", value: 18469000000, contribuicao: "3,86%" },
                 { name: "Amazonas", fill: "#4CA950", value: 116019000000, contribuicao: "24,26%" },
@@ -88,7 +142,7 @@
               ]
             },
             {
-              name: "PIB da região Nordeste: R$ 1.079.331.000.000", children: [
+              name: "Nordeste", value: "1.079.331.000.000", children: [
                 { name: "Alagoas", fill: "#FFC107", value: 63202000000, contribuicao: "5,85%" },
                 { name: "Bahia", fill: "#FFC107", value: 305321000000, contribuicao: "28,28%" },
                 { name: "Ceará", fill: "#FFC107", value: 166915000000, contribuicao: "15,46%" },
@@ -101,7 +155,7 @@
               ]
             },
             {
-              name: "PIB da região Centro Oeste: R$791.251.000.000", children: [
+              name: "Centro Oeste", value:"791.251.000.000", children: [
                 { name: "Distrito Federal", fill: "#E91E63", value: 265847000000, contribuicao: "33,59%" },
                 { name: "Goiás", fill: "#E91E63", value: 224126000000, contribuicao: "28,32%" },
                 { name: "Mato Grosso", fill: "#E91E63", value: 178650000000, contribuicao: "22,57%" },
@@ -109,7 +163,7 @@
               ]
             },
             {
-              name: "PIB da região Sudeste: R$ 3.952.695.000.000", children: [
+              name: "Sudeste", value: "3.952.695.000.000", children: [
                 { name: "Espírito Santo", fill: "#2196F3", value: 138446000000, contribuicao: "3,50%" },
                 { name: "Minas Gerais", fill: "#2196F3", value: 682786000000, contribuicao: "17,27%" },
                 { name: "Rio de Janeiro", fill: "#2196F3", value: 753824000000, contribuicao: "33,59%" },
@@ -117,7 +171,7 @@
               ]
             },
             {
-              name: "PIB da região Sul: R$ 1.308.446.000.000", children: [
+              name: "Sul", value:"1.308.446.000.000",children: [
                 { name: "Paraná", fill: "#FF5722", value: 487931000000, contribuicao: "37,29%" },
                 { name: "Rio Grande do Sul", fill: "#FF5722", value: 349275000000, contribuicao: "36%" },
                 { name: "Santa Catarina", fill: "#FF5722", value: 470942000000, contribuicao: "26,69%" },
@@ -136,11 +190,15 @@
       chart.container("container");
       chart.draw();
 
-      // configure tooltips
-      chart.tooltip().format(
-        "PIB: R$ {%value}\nContribuicao para o pib da região é de: {%contribuicao}"
-      );
+      chart.tooltip().format(function () {
+        if (this.getData('contribuicao')) {
+          return "PIB: R$ " + this.getData('value') + "\nContribuicao para o pib da região é de: " + this.getData('contribuicao');
+        } else {
+          return "PIB: R$ " + this.getData('value')
+        }
+      });
     });
+
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
